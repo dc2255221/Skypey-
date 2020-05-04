@@ -137,6 +137,18 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 // Other components, those that do not talk to Redux, should be moved over to a components directory. 
 
 ## Reducer Composition
-// Have multiple reducers in application as opposed to one reducer to handle all of the operations of the state. These reducers are then combined into one. This will increase scalability.
-// Instead of having the entire object managed by one reducer, have one reducer manage the state update for a single field in the state object. The return value from each reducer will be solely for the field they represent.
-// User field managed by user Reducer. Messages field by messages Reducer. Typing field by typing Reducer. Contacts field by contacts Reducer. ActiveUserId field by activeUserId Reducer.   
+// Have multiple reducers in application as opposed to one reducer manage the entire state updates. These reducers are then combined into one. This will make app more scalable.
+// Instead of having the entire object managed by one reducer, have one reducer manage the state update for a single field in the state object. The return value from each reducer will be solely for the field they represent. 
+// 5 fields, one for each field. We will have a user, messages, typing, contacts, and activeUserId reducer
+// To combine reducers, we need to use the helper function combineReducers from redux. combineReducers is capable of making sure the values are gotten from invoking the passed functions. All of the keys and values put together then will return in the state object of the app.   
+
+## Building Empty Screen and Chat Window
+// The Main component will display the Empty component when there is no activeUserId (which is default)
+// As soon as a user is clicked, the activeUserId will be set to the user_id of the clicked contact and Main will render the ChatWindow component, that is the conversations of the clicked user.
+
+## Breaking the ChatWindow into smaller components
+// ChatWindow will be composed of 3 subcomponents, the Header, the Chats, and the MessageInput
+
+## Submitting the Form
+
+## Updating the Message State
