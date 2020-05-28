@@ -69,6 +69,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
 
 ## Overview of Redux
+// Purpose: To store app state in a complex React app and create components that are actually reusable
 // 1. Create 3 folders for each major actor of redux app (reducers, actions, store)
     // Within each folder, create an index.js (entry point)
 // 2. Create Redux Store
